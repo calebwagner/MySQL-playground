@@ -1,2 +1,2 @@
 # sql-practice
-A collection of sample SQL file.
+A collection of sample SQL files.
