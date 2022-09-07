@@ -11,3 +11,9 @@ SELECT
     points,
     points + 10 AS discount_factor
 FROM customers
+
+SELECT
+    name,
+    unit_price,
+    unit_price * 1.1 AS "new price"
+FROM products
