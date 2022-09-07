@@ -21,3 +21,7 @@ FROM products
 SELECT *
 FROM orders
 WHERE order_date >= '2018-01-01'
+
+SELECT *
+FROM order_items
+WHERE order_id = 6 AND (quantity * unit_price) > 30
