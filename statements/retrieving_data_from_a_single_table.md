@@ -1,4 +1,4 @@
-### EMPHASIS ON `SELECT` AND `FROM` CLAUSE
+## Emphasis on `SELECT` and `FROM` clause
 
 ```sql
 SELECT * 
@@ -8,8 +8,8 @@ ORDER BY first_name
 
 ```sql
 SELECT
-	first_name,
-	last_name,
+    first_name,
+    last_name,
     points,
     points + 10 AS discount_factor
 FROM customers
@@ -23,50 +23,55 @@ SELECT
 FROM products
 ```
 
--- EMPHASIS ON `WHERE` CLAUSE
+## Emphasis on `WHERE` clause
 
--- NEW STATEMENT
+```sql
 SELECT *
 FROM Customers
 WHERE state != 'VA'
+```
 
--- NEW STATEMENT
+```sql
 SELECT *
 FROM orders
 WHERE order_date >= '2018-01-01'
 
--- NEW STATEMENT
+```sql
 SELECT *
 FROM order_items
 WHERE order_id = 6 AND (quantity * unit_price) > 30
+```
 
+## Emphasis on `AND`, `OR`, and `NOT` operator
 
--- EMPHASIS ON `AND`, `OR`, and `NOT` OPERATOR
-
--- NEW STATEMENT
+```sql
 SELECT *
 FROM Customers
 WHERE birth_date > '1990-01-01' AND points > 1000
+```
 
--- NEW STATEMENT
+```sql
 SELECT *
 FROM Customers
 WHERE birth_date > '1990-01-01' OR points > 1000 AND state = 'VA'
+```
 
--- NEW STATEMENT
+```sql
 SELECT *
 FROM Customers
 WHERE birth_date > '1990-01-01' OR points > 1000 NOT state = 'VA'
+```
 
--- NEW STATEMENT
+```sql
 SELECT *
 FROM order_items
 WHERE order_id = 6 AND quantity * unit_price > 30
+```
 
 
--- EMPHASIS ON `IN` OPERATOR
+## Emphasis on `IN` operator
 
--- NEW STATEMENT
+```sql
 SELECT *
 FROM customers
 -- BAD WAY
@@ -77,18 +82,21 @@ WHERE state IN ('VA', 'FL', 'GA')
 
 -- NOT IN EXAMPLE
 -- WHERE state NOT IN ('VA', 'FL', 'GA')
+```
 
 
--- EMPHASIS ON `BETWEEN` OPERATOR
+## Emphasis on `BETWEEN` operator
 
--- NEW STATEMENT
+```sql
 SELECT *
 FROM customers
 WHERE points
 BETWEEN 1000 AND 3000
+```
 
--- NEW STATEMENT
+```sql
 SELECT *
 FROM customers
 WHERE birth_date
 BETWEEN '1990-01-01' AND '2000-01-01'
+```
