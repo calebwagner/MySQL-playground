@@ -1,3 +1,5 @@
+# Examples For Retrieving Data From A Single Table
+
 ## Emphasis on `SELECT` and `FROM` clause
 
 ```sql
