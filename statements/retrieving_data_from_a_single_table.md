@@ -1,6 +1,6 @@
 # Examples For Retrieving Data From A Single Table
 
-| Main | Sub |
+| Repo Directory |  |
 |--|--|
 | [Main](https://github.com/calebwagner/MySQL-playground) |  |
 | [Keywords](./README.md) |  |

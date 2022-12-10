@@ -1,8 +1,9 @@
-| Table of Contents for Repo|
-|--|
-| [Main](https://github.com/calebwagner/MySQL-playground) |
-| [MySQL Keywords For Retrieving Data From A Single Table](./README.md) |
-| [Examples For Retrieving Data From A Single Table](./retrieving_data_from_a_single_table.md) |
+| Repo Directory |  |
+|--|--|
+| [Main](https://github.com/calebwagner/MySQL-playground) |  |
+| [Keywords](./README.md) |  |
+|  Retrieving Data From A Single Table | [Examples](./retrieving_data_from_a_single_table.md) |
+|  Retrieving Data From Multiple Tables | [Examples](./retrieving_data_from_multiple_tables.md) |
 
 | Term | Definition | Example |
 |--|--|--|
