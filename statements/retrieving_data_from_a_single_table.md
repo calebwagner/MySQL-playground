@@ -2,12 +2,19 @@
 
 ## Table of Contents
 [`SELECT` and `FROM` clause](#emphasis-on-select-and-from-clause)
+
 [`WHERE` clause](#emphasis-on-where-clause)
+
 [`AND`, `OR`, and `NOT` operators](#emphasis-on-and-or-and-not-operator)
+
 [`IN` operator](#emphasis-on-in-operator)
+
 [`BETWEEN` operator](#emphasis-on-between-operator)
+
 [`LIKE` operator](#emphasis-on-like-operator)
+
 [`REGEXP` operator](#emphasis-on-regexp-operator)
+
 
 ## Emphasis on `SELECT` and `FROM` clause
 
@@ -46,6 +53,7 @@ WHERE state != 'VA'
 SELECT *
 FROM orders
 WHERE order_date >= '2018-01-01'
+```
 
 ```sql
 SELECT *
@@ -122,7 +130,6 @@ BETWEEN '1990-01-01' AND '2000-01-01'
 | `'____b'` | match exactly (5 characters in this case) |
 
 Select all columns from customers tables where last name starts with 'b'.
-Difference uses:`'%b%'` before or after, `'%b'` at the end, `'b%'` at the start, `'_____b'` match exactly (6 characters - 6 '_')
 ```sql
 SELECT *
 FROM customers
@@ -144,7 +151,7 @@ WHERE
 |--|--|
 | `^` | match beginning of a string |
 | `$` | match end of a string |
-| `|` | represents the logical `or` operator |
+| `\|` | represents the logical `or` operator |
 | `[abc]` | match any single character listed in the brackets |
 | `[a-z]` | match any single character within this range specified |
 
