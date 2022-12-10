@@ -194,3 +194,19 @@ FROM
 WHERE
 	last_name REGEXP '[a-h]e'
 ```
+
+## Emphasis on `IS NULL` and `IS NOT NULL` operator
+
+```sql
+SELECT *
+FROM
+	customers
+WHERE phone IS NOT NULL
+```
+
+```sql
+SELECT *
+FROM
+	customers
+WHERE phone IS NULL
+```
