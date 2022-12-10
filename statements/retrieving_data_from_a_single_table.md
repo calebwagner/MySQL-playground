@@ -1,10 +1,11 @@
 # Examples For Retrieving Data From A Single Table
 
 | Table of Contents for Repo|
-|--|
-| [Main](https://github.com/calebwagner/MySQL-playground) |
-| [MySQL Keywords For Retrieving Data From A Single Table](./README.md) |
-| [Examples For Retrieving Data From A Single Table](./retrieving_data_from_a_single_table.md) |
+|--|--|
+| [Main](https://github.com/calebwagner/MySQL-playground) |  |
+|  Retrieving Data From A Single Table |  |
+| | [Keywords](./README.md) |
+| | [Examples](./retrieving_data_from_a_single_table.md) |
 
 | Table of Contents |
 |--|
