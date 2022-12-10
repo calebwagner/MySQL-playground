@@ -102,3 +102,22 @@ FROM customers
 WHERE birth_date
 BETWEEN '1990-01-01' AND '2000-01-01'
 ```
+
+## Emphasis on `LIKE` operator
+
+Select all columns from customers tables where last name starts with 'b'.
+Difference uses:`'%b%'` before or after, `'%b'` at the end, `'b%'` at the start, `'_____b'` match exactly (6 characters - 6 '_')
+```sql
+SELECT *
+FROM customers
+WHERE last_name LIKE 'b%'
+```
+
+```sql
+SELECT *
+FROM
+	customers
+WHERE
+	address LIKE '%trail%' OR
+    address LIKE '%avenue%'
+```
