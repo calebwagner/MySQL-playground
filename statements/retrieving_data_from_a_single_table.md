@@ -1,5 +1,14 @@
 # Examples For Retrieving Data From A Single Table
 
+## Table of Contents
+[`SELECT` and `FROM` clause](#emphasis-on-select-and-from-clause)
+[`WHERE` clause](#emphasis-on-where-clause)
+[`AND`, `OR`, and `NOT` operators](#emphasis-on-and-or-and-not-operator)
+[`IN` operator](#emphasis-on-in-operator)
+[`BETWEEN` operator](#emphasis-on-between-operator)
+[`LIKE` operator](#emphasis-on-like-operator)
+[`REGEXP` operator](#emphasis-on-regexp-operator)
+
 ## Emphasis on `SELECT` and `FROM` clause
 
 ```sql
@@ -105,6 +114,13 @@ BETWEEN '1990-01-01' AND '2000-01-01'
 
 ## Emphasis on `LIKE` operator
 
+| Symbol | Definition |
+|--|--|
+| `%b%` | match before or after |
+| `%b` | match at the end |
+| `b%` | match at the start |
+| `'____b'` | match exactly (5 characters in this case) |
+
 Select all columns from customers tables where last name starts with 'b'.
 Difference uses:`'%b%'` before or after, `'%b'` at the end, `'b%'` at the start, `'_____b'` match exactly (6 characters - 6 '_')
 ```sql
@@ -118,6 +134,61 @@ SELECT *
 FROM
 	customers
 WHERE
-	address LIKE '%trail%' OR
+    address LIKE '%trail%' OR
     address LIKE '%avenue%'
+```
+
+## Emphasis on `REGEXP` operator
+
+| Symbol | Definition |
+|--|--|
+| `^` | match beginning of a string |
+| `$` | match end of a string |
+| `|` | represents the logical `or` operator |
+| `[abc]` | match any single character listed in the brackets |
+| `[a-z]` | match any single character within this range specified |
+
+Select all columns from customers tables where address contains the string 'ave'
+```sql
+SELECT *
+FROM
+	customers
+WHERE
+	address REGEXP 'ave'
+```
+
+Select all columns from customers tables where last name starts with 'field'
+```sql
+SELECT *
+FROM
+	customers
+WHERE
+	last_name REGEXP '^field'
+```
+
+Select all columns from customers tables where last name contains 'field' or 'mac'.
+```sql
+SELECT *
+FROM
+	customers
+WHERE
+	last_name REGEXP 'field|mac'
+```
+
+Select all columns from customers tables where last name contains either 'ge', 'ie', or 'me'.
+```sql
+SELECT *
+FROM
+	customers
+WHERE
+	last_name REGEXP '[gim]e'
+```
+
+Select all columns from customers tables where last name contains either an 'a' through 'h' letter and a 'e'.
+```sql
+SELECT *
+FROM
+	customers
+WHERE
+	last_name REGEXP '[a-h]e'
 ```
