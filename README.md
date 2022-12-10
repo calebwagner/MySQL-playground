@@ -2,9 +2,11 @@
 
 This repo is where I paste in MySQL statements that I write in MySQLWorkbench.
 
-[MySQL Keywords](./statements/README.md)
+| Table of Contents for Repo|
+|--|
+| [MySQL Keywords For Retrieving Data From A Single Table](./statements/README.md) |
+| [Examples For Retrieving Data From A Single Table](./statements/retrieving_data_from_a_single_table.md) |
 
-[Examples For Retrieving Data From A Single Table](./statements/retrieving_data_from_a_single_table.md)
 
 Here is an ERD of some data I'm using ...
 
