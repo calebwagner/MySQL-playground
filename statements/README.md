@@ -1,8 +1,8 @@
 | Table of Contents for Repo|
 |--|
-| [Main](.//README.md) |
-| [MySQL Keywords For Retrieving Data From A Single Table](./statements/README.md) |
-| [Examples For Retrieving Data From A Single Table](./statements/retrieving_data_from_a_single_table.md) |
+| [Main](./README.md) |
+| [MySQL Keywords For Retrieving Data From A Single Table](./README.md) |
+| [Examples For Retrieving Data From A Single Table](./retrieving_data_from_a_single_table.md) |
 
 | Term | Definition | Example |
 |--|--|--|
