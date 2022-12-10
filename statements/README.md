@@ -17,3 +17,6 @@
 | `BETWEEN` | operator is used to specify a range of values that a column must be within in order for a record to be selected from a database table. | `SELECT` * `FROM` employees `WHERE` salary `BETWEEN` 40000 `AND` 60000; |
 | `LIKE` | operator is used to match string values based on a specified pattern. | `SELECT` * `FROM` employees `WHERE` last_name `LIKE` 'S%'; |
 | `REGEXP` | operator is used to match string values based on a specified regular expression. | `SELECT` * `FROM` employees `WHERE` last_name `REGEXP` '^[SM]'; |
+| `IS NULL` | operator is used to test if a value is `NULL` | `SELECT` * `FROM` employees `WHERE` middle_name `IS NULL`; |
+| `ORDER BY` | clause is used to specify the order in which records are to be returned in a `SELECT` statement. | `SELECT` * `FROM` employees `ORDER BY` last_name `ASC`; |
+| `LIMIT` | clause is used to limit the number of records returned in a `SELECT` statement. | SELECT * FROM employees LIMIT 10; |

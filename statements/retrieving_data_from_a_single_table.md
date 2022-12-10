@@ -2,9 +2,9 @@
 
 | Table of Contents for Repo|
 |--|
-| [Main](.//README.md) |
-| [MySQL Keywords For Retrieving Data From A Single Table](./statements/README.md) |
-| [Examples For Retrieving Data From A Single Table](./statements/retrieving_data_from_a_single_table.md) |
+| [Main](https://github.com/calebwagner/MySQL-playground) |
+| [MySQL Keywords For Retrieving Data From A Single Table](./README.md) |
+| [Examples For Retrieving Data From A Single Table](./retrieving_data_from_a_single_table.md) |
 
 | Table of Contents |
 |--|
@@ -140,8 +140,7 @@ WHERE last_name LIKE 'b%'
 
 ```sql
 SELECT *
-FROM
-	customers
+FROM customers
 WHERE
     address LIKE '%trail%' OR
     address LIKE '%avenue%'
@@ -160,60 +159,96 @@ WHERE
 Select all columns from customers tables where address contains the string 'ave'
 ```sql
 SELECT *
-FROM
-	customers
-WHERE
-	address REGEXP 'ave'
+FROM customers
+WHERE address REGEXP 'ave'
 ```
 
 Select all columns from customers tables where last name starts with 'field'
 ```sql
 SELECT *
-FROM
-	customers
-WHERE
-	last_name REGEXP '^field'
+FROM customers
+WHERE last_name REGEXP '^field'
 ```
 
 Select all columns from customers tables where last name contains 'field' or 'mac'.
 ```sql
 SELECT *
-FROM
-	customers
-WHERE
-	last_name REGEXP 'field|mac'
+FROM customers
+WHERE last_name REGEXP 'field|mac'
 ```
 
 Select all columns from customers tables where last name contains either 'ge', 'ie', or 'me'.
 ```sql
 SELECT *
-FROM
-	customers
-WHERE
-	last_name REGEXP '[gim]e'
+FROM customers
+WHERE last_name REGEXP '[gim]e'
 ```
 
 Select all columns from customers tables where last name contains either an 'a' through 'h' letter and a 'e'.
 ```sql
 SELECT *
-FROM
-	customers
-WHERE
-	last_name REGEXP '[a-h]e'
+FROM customers
+WHERE last_name REGEXP '[a-h]e'
 ```
 
 ## Emphasis on `IS NULL` and `IS NOT NULL` operator
 
 ```sql
 SELECT *
-FROM
-	customers
+FROM customers
 WHERE phone IS NOT NULL
 ```
 
 ```sql
 SELECT *
-FROM
-	customers
+FROM customers
 WHERE phone IS NULL
+```
+
+## Emphasis on `ORDER BY` clause
+
+```sql
+SELECT *
+FROM customers
+ORDER BY first_name
+```
+
+```sql
+SELECT *
+FROM customers
+ORDER BY first_name DESC
+```
+
+```sql
+SELECT *
+FROM customers
+ORDER BY first_name, state DESC
+```
+
+```sql
+SELECT first_name, last_name
+FROM customers
+ORDER BY birth_date
+```
+
+## Emphasis on `LIMIT` clause
+
+```sql
+SELECT *
+FROM customers
+LIMIT 5
+```
+
+```sql
+SELECT *
+FROM customers
+LIMIT 6, 3
+```
+
+Select first name and last name column (and save name as whole name) and points column from customers tables, order points from greatest to least, limit query to top 3.
+```sql
+SELECT CONCAT_WS(" ", `first_name`, `last_name`) AS `whole name`, points
+FROM customers
+ORDER BY points DESC
+LIMIT 3
 ```
