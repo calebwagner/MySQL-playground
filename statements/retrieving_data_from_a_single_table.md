@@ -1,19 +1,14 @@
 # Examples For Retrieving Data From A Single Table
 
-## Table of Contents
-[`SELECT` and `FROM` clause](#emphasis-on-select-and-from-clause)
-
-[`WHERE` clause](#emphasis-on-where-clause)
-
-[`AND`, `OR`, and `NOT` operators](#emphasis-on-and-or-and-not-operator)
-
-[`IN` operator](#emphasis-on-in-operator)
-
-[`BETWEEN` operator](#emphasis-on-between-operator)
-
-[`LIKE` operator](#emphasis-on-like-operator)
-
-[`REGEXP` operator](#emphasis-on-regexp-operator)
+| Table of Contents |
+|--|
+| [`SELECT` and `FROM` clause](#emphasis-on-select-and-from-clause) |
+| [`WHERE` clause](#emphasis-on-where-clause) |
+| [`AND`, `OR`, and `NOT` operators](#emphasis-on-and-or-and-not-operator) |
+| [`IN` operator](#emphasis-on-in-operator) |
+| [`BETWEEN` operator](#emphasis-on-between-operator) |
+| [`LIKE` operator](#emphasis-on-like-operator) |
+| [`REGEXP` operator](#emphasis-on-regexp-operator) |
 
 
 ## Emphasis on `SELECT` and `FROM` clause
