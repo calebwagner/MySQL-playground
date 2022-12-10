@@ -1,6 +1,6 @@
 | Table of Contents for Repo|
 |--|
-| [Main](./README.md) |
+| [Main](./) |
 | [MySQL Keywords For Retrieving Data From A Single Table](./README.md) |
 | [Examples For Retrieving Data From A Single Table](./retrieving_data_from_a_single_table.md) |
 
