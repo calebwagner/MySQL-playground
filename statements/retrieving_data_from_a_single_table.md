@@ -16,6 +16,9 @@
 | [`LIKE` operator](#emphasis-on-like-operator) |
 | [`REGEXP` operator](#emphasis-on-regexp-operator) |
 | [`IS NULL` operator](#emphasis-on-is-null-and-is-not-null-operator) |
+| [`ORDER BY` clause](#emphasis-on-order-by-clause) |
+| [`LIMIT` clause](#emphasis-on-limit-clause) |
+| []() |
 
 
 ## Emphasis on `SELECT` and `FROM` clause
