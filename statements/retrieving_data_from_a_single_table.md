@@ -1,6 +1,6 @@
 # Examples For Retrieving Data From A Single Table
 
-| Table of Contents for Repo|
+| Table of Contents for Repo|  |
 |--|--|
 | [Main](https://github.com/calebwagner/MySQL-playground) |  |
 |  Retrieving Data From A Single Table |  |
