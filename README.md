@@ -12,3 +12,4 @@ This repo is where I paste in MySQL statements that I write in MySQLWorkbench.
 
 Here is an ERD of some data I'm using ...
 
+![full_db](https://user-images.githubusercontent.com/81569328/207081936-76d3c7c2-ace1-4a53-ba60-5f887ffb84b6.svg)
