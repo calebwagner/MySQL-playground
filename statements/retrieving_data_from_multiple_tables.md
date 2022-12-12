@@ -11,7 +11,7 @@
 |--|
 | [ `JOIN` ](#emphasis-on-join) |
 | [self `JOIN`s](#emphasis-on-self-join) |
-| []() |
+| [joining multiple tables](#emphasis-on-joining-multiple-tables) |
 
 ## Emphasis on `JOIN`
 
@@ -54,4 +54,34 @@ SELECT
 FROM employees e
 JOIN employees m
 	ON e.reports_to = m.employee_id
+```
+
+## Emphasis on joining multiple tables
+
+```sql
+SELECT
+	o.order_id,
+    o.order_date,
+    c.first_name,
+    c.last_name,
+    os.name AS status
+FROM orders o
+JOIN customers c
+	ON o.customer_id = c.customer_id
+JOIN order_statuses os
+	ON o.status = os.order_status_id
+```
+
+```sql
+SELECT
+	p.date,
+	p.invoice_id,
+    p.amount,
+    c.name,
+    pm.name AS payment_method
+FROM payments p
+JOIN payment_methods pm
+	ON p.payment_method = pm.payment_method_id
+JOIN clients c
+	ON c.client_id = p.client_id
 ```
