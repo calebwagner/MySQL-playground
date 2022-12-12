@@ -9,8 +9,8 @@
 
 | Table of Contents |
 |--|
-| [ `JOIN` ](#emphasis-on-inner-join) |
-| []() |
+| [ `JOIN` ](#emphasis-on-join) |
+| [self `JOIN`s](#emphasis-on-self-join) |
 | []() |
 
 ## Emphasis on `JOIN`
@@ -31,4 +31,27 @@ INNER JOIN customers c ON o.customer_id = c.customer_id
 SELECT order_id, p.product_id, oi.unit_price, name
 FROM order_items oi
 JOIN products p ON oi.product_id = p.product_id
+```
+
+```sql
+-- Example for joining tables across databases
+USE sql_store;
+
+SELECT *
+FROM order_items oi
+JOIN sql_inventory.products p
+	ON oi.product_id = p.product_id
+```
+
+## Emphasis on self `JOIN`
+
+This can be useful in cases where you want to compare values in a single table, such as when you want to find rows that have matching or related data.
+```sql
+SELECT
+	e.employee_id,
+    CONCAT_WS(' ', e.first_name, e.last_name) AS 'employee',
+	CONCAT_WS(' ', m.first_name, m.last_name) AS 'manager'
+FROM employees e
+JOIN employees m
+	ON e.reports_to = m.employee_id
 ```
