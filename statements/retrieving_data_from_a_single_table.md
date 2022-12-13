@@ -25,88 +25,96 @@
 ## Emphasis on `SELECT` and `FROM` clause
 
 ```sql
-SELECT * 
-FROM customers
-ORDER BY first_name
+SELECT * FROM literacy_rates ORDER BY 'Literacy rate'
 ```
 
 ```sql
 SELECT
-    first_name,
-    last_name,
-    points,
-    points + 10 AS discount_factor
-FROM customers
-```
-
-```sql
-SELECT
-    name,
-    unit_price,
-    unit_price * 1.1 AS "new price"
-FROM products
+	Country,
+    Age AS age_range,
+    Gender,
+    `Literacy rate` * 100 AS literacy_rate
+FROM literacy_rates
+ORDER BY Age
 ```
 
 ## Emphasis on `WHERE` clause
 
 ```sql
-SELECT *
-FROM Customers
-WHERE state != 'VA'
+SELECT
+	Country,
+    Age AS age_range,
+    Gender,
+    `Literacy rate` * 100 AS literacy_rate
+FROM literacy_rates
+WHERE Gender = 'female'
+ORDER BY Country
 ```
 
 ```sql
-SELECT *
-FROM orders
-WHERE order_date >= '2018-01-01'
+SELECT
+	Country,
+    Age AS age_range,
+    Gender,
+    `Literacy rate` * 100 AS literacy_rate
+FROM literacy_rates
+WHERE Country != 'Afghanistan' AND Gender = 'female'
+ORDER BY Country
 ```
 
 ```sql
-SELECT *
-FROM order_items
-WHERE order_id = 6 AND (quantity * unit_price) > 30
+SELECT
+	Country,
+    Age AS age_range,
+    Gender,
+    `Literacy rate` * 100 AS literacy_rate
+FROM literacy_rates
+WHERE `Literacy rate` * 100 > 70
+ORDER BY Country
 ```
 
 ## Emphasis on `AND`, `OR`, and `NOT` operator
 
 ```sql
-SELECT *
-FROM Customers
-WHERE birth_date > '1990-01-01' AND points > 1000
+SELECT
+	Country,
+    Age AS age_range,
+    Gender,
+    `Literacy rate` * 100 AS literacy_rate
+FROM literacy_rates
+WHERE `Literacy rate` * 100 > 70 AND Age < 20
 ```
 
 ```sql
-SELECT *
-FROM Customers
-WHERE birth_date > '1990-01-01' OR points > 1000 AND state = 'VA'
+SELECT
+	Country,
+    Age AS age_range,
+    Gender,
+    `Literacy rate` * 100 AS literacy_rate
+FROM literacy_rates
+WHERE `Literacy rate` * 100 > 70 OR Country = 'Afghanistan'
 ```
 
 ```sql
-SELECT *
-FROM Customers
-WHERE birth_date > '1990-01-01' OR points > 1000 NOT state = 'VA'
+SELECT
+	Country,
+    Age AS age_range,
+    Gender,
+    `Literacy rate` * 100 AS literacy_rate
+FROM literacy_rates
+WHERE `Literacy rate` * 100 > 70 AND NOT Country = 'Russian Federation'
 ```
-
-```sql
-SELECT *
-FROM order_items
-WHERE order_id = 6 AND quantity * unit_price > 30
-```
-
 
 ## Emphasis on `IN` operator
 
 ```sql
 SELECT *
-FROM customers
--- BAD WAY
--- WHERE state = 'VA' OR state = 'GA' OR state = 'FL'
-
--- BETTER WAY
-WHERE state IN ('VA', 'FL', 'GA')
+FROM literacy_rates
+-- WHERE Region = 'Central and Southern Asia' OR 'Eastern and South-Eastern Asia' OR 'Europe and Northern America'
+WHERE Region IN ('Central and Southern Asia', 'Eastern and South-Eastern Asia', 'Europe and Northern America')
 
 -- NOT IN EXAMPLE
--- WHERE state NOT IN ('VA', 'FL', 'GA')
+-- WHERE Region NOT IN ('Europe and Northern America')
 ```
 
 
